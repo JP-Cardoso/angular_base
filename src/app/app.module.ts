@@ -19,6 +19,7 @@ import { ChangeNumberComponent } from '../app/components/change-number/change-nu
 import { ListRenderComponent } from '../app/components/list-render/list-render.component';
 import { PipesComponent } from '../app/components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 
 
@@ -34,7 +35,8 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
     ChangeNumberComponent,
     ListRenderComponent,
     PipesComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    ItemDetailComponent
 
   ],
   imports: [

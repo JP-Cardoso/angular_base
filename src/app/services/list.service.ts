@@ -24,6 +24,11 @@ export class ListService {
     return this.http.get<Animal[]>(this.apiUrl);
   };
 
+  //Por se tratar apenas de um item, não precisamos passar todo o array de animals que vem do banco.
+  getItem(id: number): Observable<Animal> {
+    return this.http.get<Animal>(`${this.apiUrl}/${id}`)
+  };
+
   remove(animals: Animal[], animal: Animal) {
     // console.log('Ativando o service');
     return animals.filter((a) => {

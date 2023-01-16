@@ -1,0 +1,10 @@
+<!--
+  Colocamos o *ngIf aqui, pois na classe deixamos esse atributo como opcional indefinido.
+  Ou seja ele pode ou não chegar, com isso o *ngIf faz uma válidação para ver se o dado chegou ou não.
+ -->
+<div class="class" *ngIf="animal">
+  <h2>ID: {{animal.id}}</h2>
+  <hr>
+  <h2>Tipo: {{animal.type}}</h2>
+  <h1>Nome: {{animal.name}}</h1>
+</div>
