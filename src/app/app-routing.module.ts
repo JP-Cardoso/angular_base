@@ -1,3 +1,4 @@
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
@@ -18,6 +19,10 @@ const routes: Routes = [
     // Criando uma rota dinamica que pega o id na requisição
     path: 'list/:id',
     component: ItemDetailComponent
+  },
+  {
+    path: 'two-way',
+    component: TwoWayBindingComponent
   }
 ];
 

@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-two-way-binding',
   templateUrl: './two-way-binding.component.html',
   styleUrls: ['./two-way-binding.component.css']
 })
-export class TwoWayBindingComponent {
+export class TwoWayBindingComponent implements OnInit {
 
   name: string = '';
+
+  ngOnInit(): void {
+    this.name = this.name;
+   console.log(this.name);
+  };
+
+
+
 
 }

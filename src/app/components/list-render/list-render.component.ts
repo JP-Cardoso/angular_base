@@ -37,7 +37,11 @@ export class ListRenderComponent implements OnInit {
 
   removeAnimal(animal: Animal) {
     console.log('Removendo um animal');
-    this.animals = this.listService.remove(this.animals, animal);
+    //Essa exclusão na linha 41 é apenas de modo visual.
+    this.animals = this.animals.filter((a) => animal.name !== a.name);
+    //Passando o id do animal que será excluido.
+    //Para todo o evento que houver interação com o BD,devemos atribuir o subscribe, mesmo que não o usemos.
+    this.listService.remove(animal.id).subscribe();
   };
 
   getAnimals(): void {

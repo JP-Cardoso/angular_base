@@ -29,11 +29,9 @@ export class ListService {
     return this.http.get<Animal>(`${this.apiUrl}/${id}`)
   };
 
-  remove(animals: Animal[], animal: Animal) {
-    // console.log('Ativando o service');
-    return animals.filter((a) => {
-      animal.name !== a.name
-    });
+  remove(id: number) {
+    //Aqui removemos de fato o itrm do banco de dados.
+    return this.http.delete<Animal>(`${this.apiUrl}/${id}`);
   };
 
 
