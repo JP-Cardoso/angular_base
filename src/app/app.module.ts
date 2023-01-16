@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 // Esse import é um recurso de formulário do angular
 import { FormsModule } from '@angular/forms';
 
-
+// Importando o app route module, as rotas
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from '../app/components/first-component/first-component.component';
 import { ParentDataComponent } from '../app/components/parent-data/parent-data.component';
@@ -32,7 +33,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
     ListRenderComponent,
     PipesComponent,
     TwoWayBindingComponent
-   
+
   ],
   imports: [
     BrowserModule,

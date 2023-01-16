@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 // Importando a interface
 import { Animal } from 'src/app/Animal';
 
+// importando a serveice
+import { ListService } from 'src/app/services/list.service';
+
 @Component({
   selector: 'app-list-render',
   templateUrl: './list-render.component.html',
@@ -22,7 +25,7 @@ export class ListRenderComponent implements OnInit {
 
   animalDetails: string = '';
 
-  constructor() {
+  constructor(private listService: ListService) {
 
   };
 
@@ -33,5 +36,10 @@ export class ListRenderComponent implements OnInit {
   // O void é usado quando a função ou o método não retornar nada.
   showAge(animal: Animal): void {
     this.animalDetails = `O pet ${animal.name} tem ${animal.age} anos`
-  }
+  };
+
+  removeAnimal(animal: Animal) {
+    console.log('Removendo um animal');
+    this.animals = this.listService.remove(this.animals, animal);
+  };
 }
