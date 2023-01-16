@@ -17,16 +17,13 @@ export class ListRenderComponent implements OnInit {
   // Quando se implementa a interface, ela meio que tipa todo o objeto,
   // para que o mesmo siga uma regra.
   animals: Animal[] = [
-    { name: 'Turca', type: 'Dog', age: 5},
-    { name: 'Tom', type: 'Cat', age: 10 },
-    { name: 'Frida', type: 'Dog', age: 2 },
-    { name: 'Bob', type: 'Horse', age: 8 }
+
   ];
 
   animalDetails: string = '';
 
   constructor(private listService: ListService) {
-
+    this.getAnimals();
   };
 
   ngOnInit(): void {
@@ -41,5 +38,10 @@ export class ListRenderComponent implements OnInit {
   removeAnimal(animal: Animal) {
     console.log('Removendo um animal');
     this.animals = this.listService.remove(this.animals, animal);
+  };
+
+  getAnimals(): void {
+    //Aqui ele espera o evento para fazer algo
+    this.listService.getAll().subscribe((animals) => (this.animals= animals));
   };
 }

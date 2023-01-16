@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 
 // Importando o app route module, as rotas
 import { AppRoutingModule } from './app-routing.module';
+// Aqui você diz ao angular que está apto a fazer req HTTP
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FirstComponentComponent } from '../app/components/first-component/first-component.component';
@@ -38,7 +40,8 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
